@@ -37,9 +37,8 @@ const Login: React.FC= () => {
 
       localStorage.setItem("token", response.data.token);
       localStorage.setItem("username", username);
-    //   onLoginSuccess(username);
-    //   dispatch(loggedin(true));
-      navigate("/sales");
+    
+      navigate("/");
     } catch (err: any) {
       setError(err.response?.data?.message || "Invalid login credentials.");
     } finally {
